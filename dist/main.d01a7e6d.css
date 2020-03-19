@@ -99,9 +99,11 @@ p {
 .text__subtitle--highlight {
   color: #ff00ff;
 }
+.container {
+  padding: 3em 2em;
+}
 .container--fill {
   background: #222227;
-  padding: 2.5em;
 }
 .container--highlight {
   border-top: 1px solid #ff00ff;
@@ -133,8 +135,7 @@ body {
 }
 .row--text {
   border-top: 1px solid #222227;
-  border-bottom: 1px solid #222227;
-  padding: 64rem 0;
+  padding-top: 64rem;
   grid-template-rows: minmax(10px, max-content);
   grid-template-columns: 1fr;
   text-align: center;
