@@ -1,5 +1,7 @@
 .container {
     padding: 3em 2em;
+    scroll-snap-align: center;
+
     &--fill {
         background: @grey--light;
     }
@@ -17,9 +19,6 @@
     background: @highlight;
     border-radius: 50%;
     margin-bottom: 25px;
-    @media screen and (max-width:800px) {
-        margin: 0 auto 25px auto;
-    }
 }
 
 .logo {
