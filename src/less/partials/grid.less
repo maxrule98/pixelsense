@@ -8,7 +8,6 @@ body {
 }
 
 .row {
-    padding: 0 25px;
     display: grid;
     grid-gap: 25px;
     align-items: center;
@@ -18,8 +17,8 @@ body {
         align-items: center;
     }
     &--text {
-        border-top: 1px solid @white;
-        border-bottom: 1px solid @white;
+        border-top: 1px solid @grey--light;
+        border-bottom: 1px solid @grey--light;
         padding: 64rem 0;
         grid-template-rows: minmax(10px, max-content);
         grid-template-columns: 1fr;
@@ -28,6 +27,7 @@ body {
     &--2 {
         grid-template-columns: repeat(2, minmax(min-content, 1fr));
         grid-template-rows: auto;
+        padding: 0px;
     }
     @media screen and (max-width: 800px) {
         text-align: center;

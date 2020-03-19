@@ -79,14 +79,16 @@ body {
 }
 h1 {
   font-size: 48rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 h2 {
   font-size: 24rem;
-  font-weight: 150;
+  font-weight: 400;
 }
 p {
+  color: #ececec;
   font-size: 15rem;
+  font-weight: 150;
 }
 .text__body {
   margin-bottom: 25px;
@@ -120,7 +122,6 @@ body {
   background: #0f0f10;
 }
 .row {
-  padding: 0 25px;
   display: grid;
   grid-gap: 25px;
   align-items: center;
@@ -131,8 +132,8 @@ body {
   align-items: center;
 }
 .row--text {
-  border-top: 1px solid #fbfbfb;
-  border-bottom: 1px solid #fbfbfb;
+  border-top: 1px solid #222227;
+  border-bottom: 1px solid #222227;
   padding: 64rem 0;
   grid-template-rows: minmax(10px, max-content);
   grid-template-columns: 1fr;
@@ -141,6 +142,7 @@ body {
 .row--2 {
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   grid-template-rows: auto;
+  padding: 0px;
 }
 @media screen and (max-width: 800px) {
   .row {
@@ -171,6 +173,7 @@ form {
   height: 64rem;
   background: none;
   border: none;
+  -webkit-appearance: none;
 }
 .btn--primary {
   background: #fbfbfb;
