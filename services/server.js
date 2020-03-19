@@ -15,20 +15,6 @@ const port = process.env.PORT || '8081';
 
     app.locals.port = port;
     app.listen(port, function() {
-        console.log(
-            '\x1b[33m%s\x1b[0m',
-            '-----------------------------------------------'
-        );
-        console.log('');
-        console.log(
-            '\x1b[33m%s\x1b[0m',
-            '  WeldNet Available at http://localhost:' + port
-        );
-        console.log('');
-        console.log(
-            '\x1b[33m%s\x1b[0m',
-            '-----------------------------------------------'
-        );
         console.log('╔════════════════════════════════════════════════════════╗');
         console.log('║                                                        ║');
         console.log('║      Application running at http://localhost:' + port + "      ║");
