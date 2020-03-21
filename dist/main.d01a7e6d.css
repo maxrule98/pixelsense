@@ -103,6 +103,9 @@ p {
   padding: 3em 2em;
   scroll-snap-align: center;
 }
+.container--center {
+  text-align: center;
+}
 .container--fill {
   background: #222227;
 }
@@ -119,6 +122,27 @@ p {
   background: #ff00ff;
   border-radius: 50%;
   margin-bottom: 25px;
+}
+.ico--center {
+  margin: 0 auto 25px auto;
+}
+.ico--center::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: #222227;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(100px);
+}
+.ico--center::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: #222227;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(200px);
 }
 @media screen and (max-width: 800px) {
   .ico {
@@ -162,9 +186,12 @@ body {
   grid-template-rows: auto;
   padding: 0px;
 }
-.row--scroll {
-  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+.row--3 {
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-template-rows: auto;
+  padding: 0px;
+}
+.row--scroll {
   padding: 0px;
 }
 @media screen and (max-width: 800px) {
