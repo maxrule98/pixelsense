@@ -126,24 +126,6 @@ p {
 .ico--center {
   margin: 0 auto 25px auto;
 }
-.ico--center::after {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background-color: #222227;
-  border-radius: 50%;
-  position: absolute;
-  transform: translateX(100px);
-}
-.ico--center::before {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background-color: #222227;
-  border-radius: 50%;
-  position: absolute;
-  transform: translateX(200px);
-}
 @media screen and (max-width: 800px) {
   .ico {
     margin: 0 auto 25px auto;
