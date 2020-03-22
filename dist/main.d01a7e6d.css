@@ -197,6 +197,8 @@ body {
 }
 form {
   width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
 }
 .input {
   color: #fbfbfb;
@@ -215,7 +217,7 @@ form {
 .btn {
   width: 100%;
   height: 64rem;
-  background: none;
+  background: #fbfbfb;
   border: none;
   -webkit-appearance: none;
 }
