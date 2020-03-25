@@ -226,10 +226,14 @@ form {
 }
 .fade-in {
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transform: translatey(250px);
+  transition-timing-function: ease-in-out;
 }
 .fade-in.appear {
   opacity: 1;
+  transform: translateY(0px);
 }
 
 
