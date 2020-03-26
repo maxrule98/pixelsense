@@ -125,10 +125,9 @@ var fadeOptions = {
 var fadeOnScroll = new IntersectionObserver(function (entries, fadeOnScroll) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
-      return;
+      entry.target.classList.remove("appear");
     } else {
-      entry.target.classList.add("appear");
-      fadeOnScroll.unobserve(entry.target);
+      entry.target.classList.add("appear"); //fadeOnScroll.unobserve(entry.target);
     }
   });
 }, fadeOptions);
@@ -163,7 +162,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53647" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54098" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

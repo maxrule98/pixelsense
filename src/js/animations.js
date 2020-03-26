@@ -7,10 +7,10 @@ const fadeOptions = {
 const fadeOnScroll = new IntersectionObserver( function(entries, fadeOnScroll) {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
-            return;
+            entry.target.classList.remove("appear");
         } else {
             entry.target.classList.add("appear");
-            fadeOnScroll.unobserve(entry.target);
+            //fadeOnScroll.unobserve(entry.target);
         }
     })
 }, fadeOptions);
