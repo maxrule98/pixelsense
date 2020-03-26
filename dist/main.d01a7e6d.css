@@ -226,13 +226,11 @@ form {
 .fade-in {
   opacity: 0;
   transition-property: opacity, transform;
-  transition-duration: 250ms;
-  transform: translatey(50px);
+  transition-duration: 375ms;
   transition-timing-function: ease-in-out;
 }
 .fade-in.appear {
   opacity: 1;
-  transform: translateY(0px);
 }
 
 
