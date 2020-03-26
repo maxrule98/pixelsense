@@ -90,6 +90,9 @@ p {
   font-size: 15rem;
   font-weight: 150;
 }
+.text__title {
+  margin-bottom: 25px;
+}
 .text__body {
   margin-bottom: 25px;
 }
@@ -150,6 +153,7 @@ img {
   grid-template-rows: minmax(min-content, max-content);
   grid-gap: 150px;
   justify-content: center;
+  align-items: center;
   background: #0f0f10;
 }
 .row {
