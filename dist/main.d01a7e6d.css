@@ -186,6 +186,7 @@ img {
     grid-gap: 0;
   }
   .row--2 {
+    grid-gap: 150px;
     grid-template-columns: 1fr;
   }
   .row--scroll {
