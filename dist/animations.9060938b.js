@@ -120,8 +120,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"js/animations.js":[function(require,module,exports) {
 var faders = document.querySelectorAll('.fade-in');
 var fadeOptions = {
-  threshold: 0,
-  rootMargin: "-150px"
+  threshold: 0.25,
+  rootMargin: "-25px"
 };
 var fadeOnScroll = new IntersectionObserver(function (entries, fadeOnScroll) {
   entries.forEach(function (entry) {
@@ -163,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54188" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55235" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
