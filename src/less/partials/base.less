@@ -1,4 +1,8 @@
 .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    grid-template-rows: minmax(min-content, max-content);
     padding: 3em 2em;
     scroll-snap-align: center;
     &--center {
@@ -28,9 +32,8 @@ img {
     height: 4em;
     background: @highlight;
     border-radius: 50%;
-    margin-bottom: 25px;
     &--center {
-        margin: 0 auto 25px auto;
+        margin: 0 auto;
     }
     @media screen and (max-width: 800px) {
         margin: 0 auto 25px auto;
