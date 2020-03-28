@@ -2,7 +2,7 @@ let date = new Date();
 
 document.querySelector('.date').innerHTML = date.getFullYear();
 
-
+/*
 var topForm = document.querySelector('.form-top');
 var bottomForm = document.querySelector('.form-bottom');
 
@@ -37,3 +37,4 @@ bottomForm.addEventListener('submit', function(event) {
     }
   });
 });
+*/
