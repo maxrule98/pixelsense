@@ -1,6 +1,6 @@
 const faders = document.querySelectorAll('.fade-in');
 
-const fadeOptions = {
+const options = {
     threshold: 0.25,
     rootMargin: "-25px"
 };
@@ -14,7 +14,7 @@ const fadeOnScroll = new IntersectionObserver( function(entries, fadeOnScroll) {
             //fadeOnScroll.unobserve(entry.target);
         }
     })
-}, fadeOptions);
+}, options);
 
 
 faders.forEach(fader => {

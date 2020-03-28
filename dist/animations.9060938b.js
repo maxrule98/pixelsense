@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/animations.js":[function(require,module,exports) {
 var faders = document.querySelectorAll('.fade-in');
-var fadeOptions = {
+var options = {
   threshold: 0.25,
   rootMargin: "-25px"
 };
@@ -131,7 +131,7 @@ var fadeOnScroll = new IntersectionObserver(function (entries, fadeOnScroll) {
       entry.target.classList.add("appear"); //fadeOnScroll.unobserve(entry.target);
     }
   });
-}, fadeOptions);
+}, options);
 faders.forEach(function (fader) {
   fadeOnScroll.observe(fader);
 });
@@ -163,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49324" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52836" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

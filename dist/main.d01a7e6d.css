@@ -32,6 +32,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
@@ -74,6 +75,7 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16rem;
+  font-weight: 150;
   line-height: 1.3;
   color: #fff;
 }
@@ -82,13 +84,19 @@ h1 {
   font-weight: 600;
 }
 h2 {
-  font-size: 24rem;
+  font-size: 28rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 20rem;
   font-weight: 400;
 }
 p {
   color: #ececec;
-  font-size: 15rem;
-  font-weight: 150;
+  font-size: 16rem;
+}
+ul {
+  font-size: 16rem;
 }
 .highlight {
   color: #ff00ff;
@@ -104,13 +112,18 @@ p {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 25px;
+  grid-gap: 25rem;
   grid-template-rows: minmax(min-content, max-content);
+  justify-content: center;
   padding: 3em 2em;
   scroll-snap-align: center;
 }
 .container--center {
   text-align: center;
+}
+.container--row {
+  text-align: center;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
 }
 .container--fill {
   background: #222227;
@@ -149,11 +162,20 @@ img {
   height: 20px;
   width: 20px;
 }
+.social {
+  fill: white;
+  width: 50px;
+  height: 50px;
+  transition: fill 275ms linear;
+}
+.social:hover {
+  fill: #ff00ff;
+}
 .col {
   display: grid;
   grid-template-columns: minmax(250px, 1250px);
   grid-template-rows: minmax(min-content, max-content);
-  grid-gap: 100px;
+  grid-gap: 100rem;
   justify-content: center;
   align-items: center;
   background: #0f0f10;
