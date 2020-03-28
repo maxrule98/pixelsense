@@ -4,8 +4,14 @@
     background: @white;
     border: none;
     -webkit-appearance: none;
+    transition: background 275ms linear;
 
     &--primary {
         background: @white;
+    }
+
+    &:hover {
+        color: @white;
+        background: @highlight;
     }
 }

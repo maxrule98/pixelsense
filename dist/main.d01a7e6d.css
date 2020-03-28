@@ -96,6 +96,7 @@ p {
   font-size: 16rem;
 }
 ul {
+  list-style-type: none;
   font-size: 16rem;
 }
 .highlight {
@@ -247,9 +248,14 @@ form {
   background: #fbfbfb;
   border: none;
   -webkit-appearance: none;
+  transition: background 275ms linear;
 }
 .btn--primary {
   background: #fbfbfb;
+}
+.btn:hover {
+  color: #fbfbfb;
+  background: #ff00ff;
 }
 .fade-in {
   opacity: 0;
