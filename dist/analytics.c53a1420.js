@@ -130,6 +130,7 @@ cookieAccept.addEventListener("click", function () {
   cookieContainer.classList.remove("appear");
   localStorage.setItem("cookieBannerDisplayed", "true");
   loadGoogleAnalytics();
+  location.reload();
 });
 cookieReject.addEventListener("click", function () {
   console.log('Cookies Rejected');
@@ -170,7 +171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51338" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

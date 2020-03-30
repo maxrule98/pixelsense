@@ -1,5 +1,4 @@
   function loadGoogleAnalytics(){
-
     document.querySelector('.analytics').innerHTML = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -7,9 +6,6 @@
     
     gtag('config', 'UA-162102461-1');
     `;
-
-
-
   }
 
 const cookieContainer = document.querySelector('.cookies');
@@ -21,6 +17,7 @@ cookieAccept.addEventListener("click", () => {
     cookieContainer.classList.remove("appear")
     localStorage.setItem("cookieBannerDisplayed", "true");
     loadGoogleAnalytics();
+    location.reload();
 });
 
 cookieReject.addEventListener("click", () => {

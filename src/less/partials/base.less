@@ -9,9 +9,13 @@
     &--center {
         text-align: center;
     }
-    &--row {
+    &--row-4 {
         text-align: center;
         grid-template-columns: repeat(4, minmax(min-content, max-content));
+    }
+    &--row-2 {
+        text-align: center;
+        grid-template-columns: repeat(2, minmax(min-content, max-content));
     }
     &--fill {
         background: @grey--light;
@@ -55,8 +59,8 @@ img {
 
 .social {
     fill: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: fill 275ms linear;
 
     &:hover {

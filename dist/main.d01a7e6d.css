@@ -125,9 +125,13 @@ ul {
 .container--center {
   text-align: center;
 }
-.container--row {
+.container--row-4 {
   text-align: center;
   grid-template-columns: repeat(4, minmax(min-content, max-content));
+}
+.container--row-2 {
+  text-align: center;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
 }
 .container--fill {
   background: #222227;
@@ -168,8 +172,8 @@ img {
 }
 .social {
   fill: white;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   transition: fill 275ms linear;
 }
 .social:hover {
@@ -212,9 +216,6 @@ img {
 .row--scroll {
   padding: 0px;
 }
-.row--fill {
-  background: #222227;
-}
 @media screen and (max-width: 800px) {
   .row {
     text-align: center;
@@ -250,7 +251,6 @@ form {
 }
 .btn {
   width: 100%;
-  min-width: 275px;
   height: 64rem;
   border: none;
   -webkit-appearance: none;
@@ -264,7 +264,6 @@ form {
   background: #ff00ff;
 }
 .btn--secondary {
-  height: 32rem;
   color: #fbfbfb;
   background: none;
 }
@@ -286,7 +285,7 @@ form {
   margin: 0 auto;
   left: 0;
   right: 0;
-  opacity: 0.95;
+  background: #000;
 }
 .cookies.appear {
   visibility: visible;
