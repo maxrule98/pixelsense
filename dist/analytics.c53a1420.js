@@ -117,45 +117,31 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/index.js":[function(require,module,exports) {
-var date = new Date();
-document.querySelector('.date').innerHTML = date.getFullYear();
-/*
-var topForm = document.querySelector('.form-top');
-var bottomForm = document.querySelector('.form-bottom');
+})({"js/analytics.js":[function(require,module,exports) {
+function loadGoogleAnalytics() {
+  document.querySelector('.analytics').innerHTML = "\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    \n    gtag('config', 'UA-162102461-1');\n    ";
+}
 
-// Add a listener for the "submit" event.
-topForm.addEventListener('submit', function(event) {
-
-  // Prevent the browser from submitting the form
-  // and thus unloading the current page.
-  event.preventDefault();
-
-  // Send the event to Google Analytics and
-  // resubmit the form once the hit is done.
-  gtag('event', 'top_form_submitted', {
-    'event_callback': function() {
-      topForm.submit();
-    }
-  });
+var cookieContainer = document.querySelector('.cookies');
+var cookieAccept = document.querySelector('#cookieAccept');
+var cookieReject = document.querySelector('#cookieReject');
+cookieAccept.addEventListener("click", function () {
+  console.log('Cookies Accepted');
+  cookieContainer.classList.remove("appear");
+  localStorage.setItem("cookieBannerDisplayed", "true");
+  loadGoogleAnalytics();
 });
-
-// Add a listener for the "submit" event.
-bottomForm.addEventListener('submit', function(event) {
-
-  // Prevent the browser from submitting the form
-  // and thus unloading the current page.
-  event.preventDefault();
-
-  // Send the event to Google Analytics and
-  // resubmit the form once the hit is done.
-  gtag('event', 'bottom_form_submitted', {
-    'event_callback': function() {
-      bottomForm.submit();
-    }
-  });
+cookieReject.addEventListener("click", function () {
+  console.log('Cookies Rejected');
+  cookieContainer.classList.remove("appear");
 });
-*/
+setTimeout(function () {
+  if (!localStorage.getItem("cookieBannerDisplayed")) {
+    cookieContainer.classList.add("appear");
+  } else {
+    loadGoogleAnalytics();
+  }
+}, 2000);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -360,5 +346,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
-//# sourceMappingURL=/js.00a46daa.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/analytics.js"], null)
+//# sourceMappingURL=/analytics.c53a1420.js.map

@@ -1,17 +1,24 @@
 .btn {
     width: 100%;
+    min-width: 275px;
     height: 64rem;
-    background: @white;
     border: none;
     -webkit-appearance: none;
     transition: background 275ms linear;
 
     &--primary {
         background: @white;
-    }
-
-    &:hover {
+        &:hover {
         color: @white;
         background: @highlight;
+        }
     }
+
+    &--secondary {
+        height: 32rem;
+        color: @white;
+        background: none;
+    }
+
+
 }
