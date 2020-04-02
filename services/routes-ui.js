@@ -8,11 +8,12 @@ const routes = app => {
     app.use('/404', express.static('dist/404.html'));
 
 
+    /*
     //404 Errors
     app.use((req, res, next) => {
         res.status(404).redirect("/404");
     });
-
+*/
     /*
     //500 Error
     app.use(function (err, req, res, next) {
