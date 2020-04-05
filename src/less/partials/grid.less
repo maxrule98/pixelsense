@@ -1,14 +1,16 @@
 .col  {
     display: grid;
+    justify-content: center;
     grid-template-columns: minmax(250px, 1250px);
     grid-template-rows: minmax(min-content, max-content);
-    grid-gap: 150rem;
-    justify-content: center;
-    align-items: center;
+    grid-gap: 125rem;
     background: @grey--dark;
 }
 
 .row {
+    display: grid;
+    justify-content: start;
+    width: 100%;
     display: grid;
     grid-gap: 25px;
     &--logo {
