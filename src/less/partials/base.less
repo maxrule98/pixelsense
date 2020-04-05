@@ -4,11 +4,8 @@
     grid-gap: 25rem;
     grid-template-rows: minmax(min-content, max-content);
     justify-content: center;
-    padding: 3em 2em;
+    padding: 2em;
     scroll-snap-align: center;
-    &--center {
-        text-align: center;
-    }
     &--row-4 {
         text-align: center;
         grid-template-columns: repeat(4, minmax(min-content, max-content));
@@ -45,12 +42,7 @@ img {
     background: @highlight;
     border-radius: 50%;
     transition: box-shadow 275ms linear;
-    &--center {
-        margin: 0 auto;
-    }
-    @media screen and (max-width: 800px) {
-        margin: 0 auto 25px auto;
-    }
+
 }
 
 .logo {

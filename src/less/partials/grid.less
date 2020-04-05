@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: minmax(250px, 1250px);
     grid-template-rows: minmax(min-content, max-content);
-    grid-gap: 125rem;
+    grid-gap: 150rem;
     justify-content: center;
     align-items: center;
     background: @grey--dark;
@@ -11,34 +11,38 @@
 .row {
     display: grid;
     grid-gap: 25px;
-    align-items: center;
-    justify-content: space-between;
     &--logo {
         justify-content: center;
         align-items: center;
     }
     &--text {
+
         grid-template-rows: minmax(10px, max-content);
         grid-template-columns: 1fr;
         text-align: center;
     }
     &--2 {
+
         grid-template-columns: repeat(2, minmax(min-content, 1fr));
         grid-template-rows: repeat(minmax(min-content, 1fr));
         margin: 0;
     }
     &--3 {
+
         grid-template-columns: repeat(3, minmax(min-content, 1fr));
         grid-template-rows: auto;
         padding: 0px;
     }
     &--scroll {
+
         padding: 0px;
     }
 
     @media screen and (max-width: 800px) {
-        text-align: center;
-        
+
+        &--center {
+            text-align: center;
+        }
         &--2 {
             grid-gap: 25px;
             grid-template-columns: 1fr;
