@@ -23,6 +23,9 @@
     &--highlight {
         border-top: 1px solid @highlight;
     }
+    &:hover > .ico {
+        box-shadow: inset 0px 0px 7.5px 0px rgba(0,0,0,.9);
+    }
 } 
 
 img {
@@ -41,6 +44,7 @@ img {
     height: 4em;
     background: @highlight;
     border-radius: 50%;
+    transition: box-shadow 275ms linear;
     &--center {
         margin: 0 auto;
     }

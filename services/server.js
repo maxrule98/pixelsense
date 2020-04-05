@@ -14,7 +14,11 @@ const port = process.env.PORT || '8081';
     app.use(bodyParser.urlencoded({ extended: true }));
     uiRoutes(app);
     mail(app);
-    
+
+    //404 Errors
+    app.use((req, res, next) => {
+        res.status(404).redirect("/404");
+    });
 /*
     app.use((req, res, next) => {
         const error = new Error('Page not found');

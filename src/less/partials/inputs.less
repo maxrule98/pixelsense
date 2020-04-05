@@ -12,9 +12,15 @@ form {
     width: 100%;
     height: 64rem;
     padding: 0 25px;
-    transition: outline 275ms linear;
+    transition-property: background, outline;
+    transition-duration: 275ms;
+    transition-timing-function: linear;
     margin-bottom: 25px;
     &:focus {
         outline: 1px solid @highlight;
+        background: rgba(225, 225, 225, 0.05);
+    }
+    &:hover {
+        background: rgba(225, 225, 225, 0.05);
     }
 }
