@@ -1,12 +1,12 @@
+require('dotenv').config();
 const express = require('express');
-const request = require('request')
+const request = require('request');
 const routes = app => {
-  app.post('/', (req, res) => {
+  app.post('/signup', (req, res) => {
     const { name, email } = req.body;
 
     if (!name || !email) {
-      console.log("NAH");
-      return;
+      res.redirect('/404');
     }
 
     //req data
@@ -20,7 +20,7 @@ const routes = app => {
           }
         }
       ]
-    }
+    };
 
     const postData = JSON.stringify(data);
 
@@ -28,10 +28,10 @@ const routes = app => {
       url: 'https://us19.api.mailchimp.com/3.0/lists/c218fccf61',
       method: 'POST',
       headers: {
-        Authorization: 'auth 9b9c428523aaa7c2191788b49243fe41-us19'
+        Authorization: 'auth ' + process.env.MAILCHIMP_KEY
       },
       body: postData
-    }
+    };
 
     request(options, (err, response, body) => {
       if(err) {
@@ -46,6 +46,7 @@ const routes = app => {
     });
   });
 }
+
 module.exports = routes;
 
 
