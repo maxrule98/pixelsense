@@ -1,8 +1,58 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+const request = require('request')
 const routes = app => {
-        app.post('/', (req, res) => {
-        "use strict";
+  app.post('/', (req, res) => {
+    const { name, email } = req.body;
+
+    if (!name || !email) {
+      console.log("NAH");
+      return;
+    }
+
+    //req data
+    const data = {
+      members: [
+        {
+          email_address: email,
+          status: 'subscribed',
+          merge_fields: {
+            NAME: name
+          }
+        }
+      ]
+    }
+
+    const postData = JSON.stringify(data);
+
+    const options = {
+      url: 'https://us19.api.mailchimp.com/3.0/lists/c218fccf61',
+      method: 'POST',
+      headers: {
+        Authorization: 'auth 9b9c428523aaa7c2191788b49243fe41-us19'
+      },
+      body: postData
+    }
+
+    request(options, (err, response, body) => {
+      if(err) {
+        res.redirect('/404');
+      } else {
+        if (response.statusCode === 200) {
+          res.redirect('/contact-success');
+        } else {
+          res.redirect('/404');
+        }
+      }
+    });
+  });
+}
+module.exports = routes;
+
+
+
+
+
+/*         "use strict";
         async function main() {
             var transporter = nodemailer.createTransport({
                 service: 'gmail',
@@ -37,8 +87,4 @@ const routes = app => {
          main().catch(console.error);
     
         res.redirect('/contact-success');
-    });
-}
-
-module.exports = routes;
-
+    }); */
